@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatimə Əliyeva - İngilis Dili Tədris Mərkəzi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3a86ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .about,
+        .services,
+        .contact {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #3a86ff;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .accordion {
+            background-color: #e0f7fa;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            transition: 0.4s;
+            margin: 10px 0;
+        }
+
+        .accordion:hover {
+            background-color: #d0e7f1;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #333;
+            font-weight: bold;
+            float: right;
+        }
+
+        .accordion.active:after {
+            content: '\2212';
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        footer {
+            background-color: #3a86ff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Fatimə Əliyevanın İngilis Dili Tədris Mərkəzinə Xoş Gəldiniz</h1>
+    </header>
+
+    <section class="about">
+        <h2>Haqqımda</h2>
+        <p>Salam! Mənim adım Fatimə Əliyevadır, FLEX proqramının məzunu və həvəsli ingilis dili müəlliməsiyəm. Universitet
+            məzunu olmasam da, ABŞ-da bir il təhsil almaq və yaşamaq təcrübəm məni peşəkar bir tədrisçi kimi yetişdirib.
+            Məqsədim ingilis dilini öyrənməyi hər kəs üçün maraqlı və effektiv bir təcrübəyə çevirməkdir.</p>
+    </section>
+
+    <section class="services">
+        <h2>Tədris Xidmətlərim</h2>
+
+        <button class="accordion">Ümumi İngilis Dili</button>
+        <div class="panel">
+            <p>Oxuma, yazma, dinləmə və danışıq bacarıqlarınızı inkişaf etdirin. Bu dərslər hər səviyyəyə uyğun hazırlanır və sizin bütün dil bacarıqlarınızı balanslaşdırmaq məqsədi daşıyır.</p>
+        </div>
+
+        <button class="accordion">Danışıq Dərsləri</button>
+        <div class="panel">
+            <p>Danışıq səlisliyinizə yönəlik dərslər. Bu dərslərdə real həyatda istifadə olunan ifadələr və gündəlik ünsiyyət bacarıqlarını inkişaf etdirirsiniz.</p>
+        </div>
+
+        <button class="accordion">Məktəblilər üçün İngilis Dili</button>
+        <div class="panel">
+            <p>Məktəb şagirdlərinin ingilis dili bacarıqlarını inkişaf etdirmək və məktəb tapşırıqlarında müvəffəqiyyət qazanmaq üçün xüsusi dərslər təklif olunur.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Əlaqə</h2>
+        <p>İngilis dili öyrənməyə başlamağa hazırsınızsa, mənimlə əlaqə saxlayın!</p>
+        <p><strong>Whatsapp:</strong> +994778007808</p>
+        <p><strong>Email:</strong> fatimealiyeff@gmail.com</p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/leearn_english.f">leearn_english.f</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fatimə Əliyeva - Bütün hüquqlar qorunur</p>
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
